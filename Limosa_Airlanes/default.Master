@@ -1,0 +1,189 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="default.master.vb" Inherits="Limosa_Airlanes._default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Limosa Airlanes</title>
+    <link href="tasarim.css" rel="stylesheet" />
+
+     <style type="text/css">
+         .auto-style1 {
+            float: left;
+            width: 125px;
+            height: 30px;
+            margin-top: 5px;
+            background-color: white;
+            background-image: url('temalar/btnarka1.jpg');
+            color:  #0097A7;
+            line-height: 30px;
+            text-align: center;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+        .auto-style2 {
+            float: left;
+            width: 140px;
+            height: 30px;
+            margin-top: 5px;
+            background-color: white;
+            background-image: url('temalar/btnarka1.jpg');
+            color: #0097A7;
+            line-height: 30px;
+            text-align: center;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="form1" runat="server">
+    <div class="kutu">
+      <div class="slider">
+          
+                
+                 
+                     <center><img src="gorseller/limosa.jpg" alt="" /></center>  
+                   
+                
+           
+             
+    </div>
+      
+        <div class="menu">
+            
+            <div style="width: 1000px; height: 40px; float: right">
+              <a href="default.aspx"><div class="menubuton" style=" background-repeat: repeat">
+                    Anasayfa
+                </div></a>
+                 <a href="seyehat_bilgileri.aspx"><div class="menubuton">
+                    Hakkımızda
+                </div></a>
+                 <a href="deneyim.aspx"><div class="menubuton">
+                    Sıkça Sorulanlar
+                </div></a>
+                 <a href="kurumsal.aspx"><div class="menubuton">
+                    Randevu Al</div></a>
+                  
+            
+            </div>
+        </div>
+     
+        <div class="govde">
+        
+                <div class="govdesol">
+                 <div class="govdebaslik">&nbsp; Duyurular</div>
+                    <div class="govdeicerik">
+                          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    
+                    <asp:DataList ID="DataList23" runat="server">    
+                        <ItemTemplate>
+                            <table class="auto-style1" style="background-color: #EFEFEF">
+                                <tr>
+                                    <td>
+                                        <asp:Image ID="Image1" runat="server" Height="30px" ImageUrl='<%# Eval("duyurularResim") %>' Width="30px" />
+                                    </td>
+                                    <td style="width: 230px; text-align: left; padding-left: 3px;">
+                                        <asp:Label ID="Label1" runat="server" ForeColor="#454545" Text='<%# Eval("duyurularBaslik") %>'></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding-left: 5px">
+                                        <asp:Label ID="Label2" runat="server" ForeColor="#606060" Text='<%# Eval("duyurularIcerik") %>'></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: right; font-size: small; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #2A595C;">
+                                        <asp:Label ID="Label3" runat="server" ForeColor="#898989" Text='<%# Eval("duyurularTarih", "{0:dd mmmm yyyy}") %>'></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    
+                   </asp:ContentPlaceHolder>
+                    </div>
+                 
+                <div class="govdebaslik">&nbsp; Kampanyalar</div>
+
+                <div class="govdeicerik">
+                    
+                   <asp:ContentPlaceHolder ID="giris" runat="server">
+                     
+                <asp:DataList ID="datalist11" runat="server" Width="100%">
+                        <ItemTemplate>
+                            <table class="auto-style1" style="background-color: #EFEFEF">
+                                <tr>
+                                    <td>
+                                        <asp:Image ID="Image1" runat="server" Height="30px" ImageUrl='<%# Eval("kampanyalarResim") %>' Width="30px" />
+                                    </td>
+                                    <td style="width: 230px; text-align: left; padding-left: 3px;">
+                                        <asp:Label ID="Label1" runat="server" ForeColor="#454545" Text='<%# Eval("kampanyalarBaslik") %>'></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding-left: 5px">
+                                        <asp:Label ID="Label2" runat="server" ForeColor="#606060" Text='<%# Eval("kampanyalarIcerik") %>'></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: right; font-size: small; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #2A595C;">
+                                        <asp:Label ID="Label3" runat="server" ForeColor="#898989" Text='<%# Eval("kampanyalarTarih", "{0:dd mmmm yyyy}") %>'></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </ItemTemplate>
+                    </asp:DataList>
+                    
+                   </asp:ContentPlaceHolder>
+                    
+                </div>
+         
+                <div class="govdebaslik">&nbsp; Haberler</div>
+                <div class="govdeicerik">
+                
+                <asp:DataList ID="datalist_duyuru" runat="server" Width="100%">
+                        <ItemTemplate>
+                            <table class="auto-style1" style="background-color: #EFEFEF">
+                                <tr>
+                                    <td>
+                                        <asp:Image ID="Image1" runat="server" Height="30px" ImageUrl='<%# Eval("haberlerResim") %>' Width="30px" />
+                                    </td>
+                                    <td style="width: 230px; text-align: left; padding-left: 3px;">
+                                        <asp:Label ID="Label1" runat="server" ForeColor="#454545" Text='<%# Eval("haberlerBaslik") %>'></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="padding-left: 5px">
+                                        <asp:Label ID="Label2" runat="server" ForeColor="#606060" Text='<%# Eval("haberlerIcerik") %>'></asp:Label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: right; font-size: small; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #2A595C;">
+                                        <asp:Label ID="Label3" runat="server" ForeColor="#898989" Text='<%# Eval("haberlerTarih", "{0:dd mmmm yyyy}") %>'></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </div>
+                    
+            </div>
+           
+             <div class="govdesag">
+                  <asp:ContentPlaceHolder ID="content" runat="server">
+                      <p>
+                          &nbsp;</p>
+            </asp:ContentPlaceHolder>
+             </div>
+        </div>
+         <div class="alt">
+        Limosa Airlanes</div>
+        
+    </div>
+    </form>
+</body>
+</html>

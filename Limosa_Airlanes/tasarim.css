@@ -1,0 +1,136 @@
+﻿body {
+    background-color: whitesmoke;
+    background-image: url(/desen1.jpg);
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: repeat;
+    /*#e1e1e1;*/
+}
+
+* { /*burda yıldız kullanarak tüm alanlarda alttaki bölümün etkili olmasını sağladık*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        font-weight: bolder;
+    }
+
+.butongorsel {
+    background-color: #0097A7;
+    width: 100px;
+    height: 25px;
+    color: white;
+}
+
+    .butongorsel:hover {
+        background-color: #6bdfe6;
+    }
+
+.textboxgorsel {
+    width: 150px;
+    height: 20px;
+    border: 1px dotted #0097A7;
+}
+
+.menubuton {
+    float: left;
+    width: 133px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: white;
+    background-image: url('temalar/btnarka1.jpg');
+    color: #EB2C68;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+    .menubuton:hover {
+        font-weight: bolder;
+    }
+
+.kutu {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.slider {
+    width: 1000px;
+    height: 245px;
+    float: left;
+    background-color: #00AA8D;
+    background-image: url("/desen.png");
+    background-repeat: repeat;
+}
+
+.kutu .menu {
+    width: 1000px;
+    height: 40px;
+    float: left;
+    background-color: #EB2C68;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.kutu .govde {
+    width: 1000px;
+    height: auto;
+    float: left;
+    margin-top: 3px;
+}
+
+.kutu .govde {
+    width: 1000px;
+    height: auto;
+    float: left;
+    margin-top: 3px;
+}
+
+    .kutu .govde .govdesol {
+        width: 270px;
+        height: auto;
+        float: left;
+    }
+
+        .kutu .govde .govdesol .govdebaslik {
+            width: 100%;
+            height: 30px;
+            float: left;
+            background-color: #EB2C68;
+            border: 1px dotted #EB2C68;
+            color: white;
+        }
+
+        .kutu .govde .govdesol .govdeicerik {
+            width: 100%;
+            float: left;
+            height: auto;
+            border: 1px dotted #0097A7;
+        }
+
+    .kutu .govde .govdesag {
+        width: 700px;
+        height: auto;
+        float: right;
+        border: 1px dotted #0097A7;
+    }
+
+.kutu .alt {
+    width: 100%;
+    height: 40px;
+    float: left;
+    border: 1px dotted #0097A7;
+    margin-top: 20px;
+    background-color: #0097A7;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+}
